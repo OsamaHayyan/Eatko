@@ -41,10 +41,7 @@ const Introduction = ({ navigation }: Props) => {
   };
   return (
     <>
-      <Animated.View
-        style={styles.container}
-        layout={FadeInDown.duration(3000)}
-      >
+      <Animated.View style={styles.container}>
         <Pressable
           style={styles.section1}
           onPress={() => navigation.replace("HomeScreens")}
