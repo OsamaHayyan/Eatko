@@ -48,7 +48,7 @@ const ImageLoader = (props: Props) => {
           ]}
         >
           <Image
-            source={require("../../assets/images/imageLoading.png")}
+            source={require("../../assets/images/imageLoadingWithAnimation.png")}
             style={[
               {
                 flex: 1,
