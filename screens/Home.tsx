@@ -17,6 +17,8 @@ const Home = (props: Props) => {
   return (
     <AnimatedView style={{ flex: 1 }}>
       <FlatList
+        initialNumToRender={8}
+        maxToRenderPerBatch={2}
         showsVerticalScrollIndicator={false}
         style={styles.container}
         contentContainerStyle={{ paddingTop: 31 }}

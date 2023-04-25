@@ -19,13 +19,8 @@ const width = Dimensions.get("window").width;
 const List = ({ data, headerTitle, renderItem }: Props) => {
   return (
     <FlatList
-      getItemLayout={(data, index) => ({
-        length: width / 2 + 36,
-        offset: width / 2 + 36 * index,
-        index,
-      })}
       initialNumToRender={6}
-      maxToRenderPerBatch={6}
+      maxToRenderPerBatch={2}
       removeClippedSubviews={true}
       showsVerticalScrollIndicator={false}
       ListHeaderComponentStyle={{
