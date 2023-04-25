@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import getFavorite from "../components/common/storage/getFavorite";
-import saveFavorite from "../components/common/storage/saveFavorite";
 
 export interface FavoriteType {
   favorite: boolean;
