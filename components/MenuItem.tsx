@@ -73,6 +73,7 @@ const MenuItem = ({
             transition={100}
             contentFit="cover"
             contentPosition={"top"}
+            backgroundColor="#FFCBAA"
           />
         </View>
         <View style={styles.foodBody}>
