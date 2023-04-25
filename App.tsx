@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { View } from "react-native";
+import { I18nManager, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
@@ -29,6 +29,8 @@ SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
+  I18nManager.forceRTL(false);
+  I18nManager.allowRTL(false);
   const queryClient = new QueryClient();
   const [fontsLoaded] = useFonts({
     "Poppins-400": require("./assets/fonts/Poppins-Regular.ttf"),
