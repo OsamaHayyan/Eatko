@@ -35,7 +35,7 @@ const AppLoading = ({ navigation }: Props) => {
   });
   useEffect(() => {
     const wrapper = () => {
-      navigation.push("Introduction");
+      navigation.replace("Introduction");
     };
     opacity.value = withTiming(1, { duration: 1500 });
     leftPosition.value = withTiming(0, {
