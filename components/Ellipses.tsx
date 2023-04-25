@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
 
 type Props = {};
@@ -69,7 +69,6 @@ const Ellipses = (props: Props) => {
             top: -37,
             right: -100,
           },
-          //   style,
         ]}
       ></View>
     </>

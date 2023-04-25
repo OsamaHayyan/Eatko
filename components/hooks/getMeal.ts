@@ -38,7 +38,6 @@ const useGetMeal = (
         }
         return data;
       },
-      // refetchOnMount: "always",
     }
   );
 

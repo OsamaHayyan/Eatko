@@ -1,9 +1,7 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import SearchBox from "../components/search/SearchBox";
-import { Image } from "expo-image";
 import SearchResults from "../components/search/SearchResults";
-import { mealType } from "../types/mealType";
 import usePostSearch from "../components/hooks/postSearch";
 import { useMutation } from "@tanstack/react-query";
 import { useFocusEffect } from "@react-navigation/native";

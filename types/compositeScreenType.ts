@@ -1,16 +1,7 @@
 import { RootStackParamList } from "../App";
-import type {
-  CompositeNavigationProp,
-  CompositeScreenProps,
-} from "@react-navigation/native";
-import type {
-  BottomTabNavigationProp,
-  BottomTabScreenProps,
-} from "@react-navigation/bottom-tabs";
-import type {
-  NativeStackNavigationProp,
-  NativeStackScreenProps,
-} from "@react-navigation/native-stack";
+import type { CompositeNavigationProp } from "@react-navigation/native";
+import type { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootTapParamList } from "../components/TabBottomScreens";
 
 export type CompositeScreenHomeType = CompositeNavigationProp<

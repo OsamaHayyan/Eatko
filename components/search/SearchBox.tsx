@@ -1,9 +1,6 @@
-import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native";
+import { StyleProp, StyleSheet, View, ViewStyle } from "react-native";
 import React, { useRef, useState } from "react";
-import {
-  NativeViewGestureHandlerProps,
-  TextInput,
-} from "react-native-gesture-handler";
+import { TextInput } from "react-native-gesture-handler";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 type Props = {

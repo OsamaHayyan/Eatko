@@ -19,7 +19,6 @@ export const counterSlice = createSlice({
         return;
       const newData = { ...action.payload, favorite: true };
       state.push(newData);
-      // saveFavorite(newData);
     },
     removeFromFavorite: (state, action: PayloadAction<FavoriteType>) => {
       let newState: FavoriteType[] = [];
@@ -28,9 +27,6 @@ export const counterSlice = createSlice({
           return newState.push(item);
         }
       });
-      // state.filter((item) => item.idMeal === action.payload.idMeal);
-
-      // saveFavorite(newState);
       return newState;
     },
   },

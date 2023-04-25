@@ -1,18 +1,6 @@
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  ImageSourcePropType,
-} from "react-native";
+import { Image, StyleSheet, ImageSourcePropType } from "react-native";
 import React from "react";
-import Animated, {
-  FadeInLeft,
-  FadeInRight,
-  Layout,
-  SequencedTransition,
-  Transition,
-} from "react-native-reanimated";
+import Animated, { FadeInLeft } from "react-native-reanimated";
 
 type Props = {
   imageSource: ImageSourcePropType;

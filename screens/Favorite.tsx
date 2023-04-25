@@ -1,16 +1,9 @@
-import {
-  Alert,
-  Dimensions,
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
-import React, { useCallback, useEffect, useState } from "react";
+import { StyleSheet, Text } from "react-native";
+import React from "react";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../App";
 import MenuItem from "../components/MenuItem";
-import { useAppSelector } from "../components/hooks/redux";
+import { useAppSelector } from "../store/redux";
 import { useDispatch } from "react-redux";
 import { FavoriteType, removeFromFavorite } from "../store/favoriteSlice";
 import FavoriteEmpty from "../components/FavoriteEmpty";
@@ -37,35 +30,6 @@ const Favorite = ({ navigation, route }: Props) => {
 
   return (
     <AnimatedView style={[styles.container]}>
-      {/* <FlatList
-        showsVerticalScrollIndicator={false}
-        columnWrapperStyle={{
-          flexDirection: "row",
-          alignItems: "flex-start",
-          justifyContent: "space-between",
-          flex: 1,
-          marginBottom: 16,
-          gap: 16,
-          paddingBottom: 24,
-          paddingHorizontal: 20,
-        }}
-        contentContainerStyle={{
-          flexGrow: 1,
-        }}
-        ListHeaderComponent={() => }
-        data={data}
-        renderItem={({ item }) => (
-          <MenuItem
-            idMeal={item.idMeal}
-            strMeal={item.strMeal}
-            strMealThumb={item.strMealThumb}
-            favorite={item.favorite}
-            onPress={handleFavorite}
-          />
-        )}
-        keyExtractor={(item) => item.idMeal}
-        numColumns={2}
-      /> */}
       <List
         data={data}
         headerTitle={<Text style={styles.header}>Favorite</Text>}
@@ -87,9 +51,6 @@ const styles = StyleSheet.create({
   header: {
     fontFamily: "Poppins-600",
     fontSize: 30,
-    // marginBottom: 30,
-    // marginTop: 25,
-    // paddingLeft: 20,
   },
   animatedStyle: {
     flex: 1,

@@ -1,18 +1,11 @@
-import {
-  Alert,
-  Dimensions,
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { Alert, StyleSheet, Text, View } from "react-native";
+import React, { useCallback } from "react";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../App";
 import MenuItem from "../components/MenuItem";
 import ScreenHeader from "../components/Ui/ScreenHeader";
 import useGetMenu from "../components/hooks/getMenu";
-import { useAppDispatch, useAppSelector } from "../components/hooks/redux";
+import { useAppDispatch, useAppSelector } from "../store/redux";
 import {
   FavoriteType,
   addToFavorite,

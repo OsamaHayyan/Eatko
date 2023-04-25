@@ -1,5 +1,5 @@
 import { Dimensions, Pressable, StyleSheet, Text, View } from "react-native";
-import React, { MutableRefObject, useEffect, useState } from "react";
+import React, { MutableRefObject } from "react";
 import { Path, Svg } from "react-native-svg";
 import { useNavigation } from "@react-navigation/native";
 

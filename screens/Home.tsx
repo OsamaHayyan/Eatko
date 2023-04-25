@@ -1,9 +1,7 @@
 import { StyleSheet, FlatList, Text, View } from "react-native";
-import React, { useCallback } from "react";
+import React from "react";
 import Category from "../components/Category";
 import useGetAllCategories from "../components/hooks/getCategories";
-import { useFocusEffect } from "@react-navigation/native";
-import { Easing, withTiming } from "react-native-reanimated";
 import AnimatedView from "../components/Ui/AnimatedView";
 import Loading from "../components/Ui/Loading";
 

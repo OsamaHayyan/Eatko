@@ -7,7 +7,7 @@ import {
   Text,
   View,
 } from "react-native";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import * as Linking from "expo-linking";
 
@@ -18,7 +18,7 @@ import Recipe from "../components/food/Recipe";
 import Ingrediants from "../components/food/Ingrediants";
 import FavoriteButton from "../components/food/FavoriteButton";
 import useGetMeal from "../components/hooks/getMeal";
-import { useAppDispatch, useAppSelector } from "../components/hooks/redux";
+import { useAppDispatch, useAppSelector } from "../store/redux";
 import { addToFavorite, removeFromFavorite } from "../store/favoriteSlice";
 import { storeMeal } from "../store/mealSlice";
 import Loading from "../components/Ui/Loading";
@@ -172,7 +172,6 @@ const styles = StyleSheet.create({
     height: 360,
     width: "100%",
     backgroundColor: "#FFCBAA",
-    // paddingHorizontal: 24,
     borderBottomRightRadius: 25,
     borderBottomLeftRadius: 25,
     opacity: 0.88,
@@ -181,22 +180,11 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: "Poppins-700",
     fontSize: 40,
-    // width: 291,
     color: "#000000d4",
     textShadowColor: "#00000029",
     textShadowOffset: { width: -1, height: 2 },
     textShadowRadius: 10,
   },
-  // imageContainer: {
-  //   flex: 1,
-  //   backgroundColor: "#ffffff69",
-  //   position: "absolute",
-  //   bottom: 0,
-  //   right: 0,
-  //   top: 0,
-  //   left: 0,
-  //   zIndex: -1,
-  // },
   image: {
     flex: 1,
   },

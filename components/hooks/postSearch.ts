@@ -1,6 +1,4 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { storeMeal } from "../../store/mealSlice";
 import { mealType } from "../../types/mealType";
 
 const usePostSearch = async (strMeal: string) => {

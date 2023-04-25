@@ -3,11 +3,6 @@ import React from "react";
 import { Pressable } from "react-native";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
-import { RootStackParamList } from "../App";
-import type { CompositeScreenProps } from "@react-navigation/native";
-import type { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
-import type { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootTapParamList } from "./TabBottomScreens";
 import { CompositeScreenHomeType } from "../types/compositeScreenType";
 
 type Props = {

@@ -1,6 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Image } from "expo-image";
 import { mealType } from "../../types/mealType";
 import { useNavigation } from "@react-navigation/native";
 import { CompositeScreenFoodType } from "../../types/compositeScreenType";

@@ -1,15 +1,10 @@
-import { View, Text, Image, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 import React, { useState } from "react";
 import IntroductionNextButton from "../components/Introduction/IntroductionNextButton";
 import IntroductionBodyInfo from "../components/Introduction/IntroductionBodyInfo";
-import Animated, { FadeInDown, useSharedValue } from "react-native-reanimated";
-import { ParamListBase, useNavigation } from "@react-navigation/native";
-import {
-  NativeStackNavigationProp,
-  NativeStackScreenProps,
-} from "@react-navigation/native-stack";
+import Animated, { FadeInDown } from "react-native-reanimated";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../App";
-import { StatusBar } from "expo-status-bar";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Introduction">;
 const sentences = [
