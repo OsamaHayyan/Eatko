@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Pressable } from "react-native";
 import React, { useState } from "react";
 import IntroductionNextButton from "../components/Introduction/IntroductionNextButton";
 import IntroductionBodyInfo from "../components/Introduction/IntroductionBodyInfo";
-import Animated, { FadeInDown } from "react-native-reanimated";
+import Animated from "react-native-reanimated";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../App";
 

@@ -5,6 +5,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { persistReducer, persistStore } from "redux-persist";
 import thunk from "redux-thunk";
 import menuSlice from "./menuSlice";
+import introductionSlice from "./introductionSlice";
 
 const persistConfig = {
   key: "root",
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   favorite: favoriteSlice,
   meal: mealSlice,
   menu: menuSlice,
+  introduction: introductionSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -10,10 +10,14 @@ import Animated, {
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../App";
 import Ellipses from "../components/Ellipses";
+import { useAppDispatch, useAppSelector } from "../store/redux";
+import { setAppOpened } from "../store/introductionSlice";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Introduction">;
 
 const AppLoading = ({ navigation }: Props) => {
+  const appOpened = useAppSelector(({ introduction }) => introduction);
+  const dispatch = useAppDispatch();
   const size = useSharedValue(1173);
   const leftPosition = useSharedValue(-55);
   const topPosition = useSharedValue(94);
@@ -34,9 +38,17 @@ const AppLoading = ({ navigation }: Props) => {
     };
   });
   useEffect(() => {
-    const wrapper = () => {
-      navigation.replace("Introduction");
-    };
+    let wrapper: () => void;
+    if (appOpened) {
+      wrapper = () => {
+        navigation.replace("HomeScreens");
+      };
+    } else {
+      dispatch(setAppOpened(true));
+      wrapper = () => {
+        navigation.replace("Introduction");
+      };
+    }
     opacity.value = withTiming(1, { duration: 1500 });
     leftPosition.value = withTiming(0, {
       duration: 1500,
