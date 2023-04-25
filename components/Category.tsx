@@ -12,7 +12,7 @@ type Props = {
   name: string;
 };
 
-const Category = ({ id, name, image }: Props) => {
+const Category = ({ name, image }: Props) => {
   const { navigate } = useNavigation<CompositeScreenHomeType>();
   const handlePress = () => {
     navigate("Menu", { category: name });
@@ -76,7 +76,7 @@ const Category = ({ id, name, image }: Props) => {
         </Text>
         <View style={styles.imageContainer}>
           <ImageLoader
-            source={"asd"}
+            source={image}
             contentFit="contain"
             style={styles.image}
             backgroundColor="transparent"
