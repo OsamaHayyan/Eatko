@@ -44,7 +44,7 @@ const useGetMenu = (
   favorite: FavoriteType[],
   dispatch: Dispatch<AnyAction>
 ) => {
-  const { isLoading, data, isError, remove } = useQuery(
+  const { isLoading, data, isError, refetch } = useQuery(
     ["menu"],
     () => getMeal(menu),
     {
@@ -55,7 +55,7 @@ const useGetMenu = (
     }
   );
 
-  return { isLoading, data, isError, remove };
+  return { isLoading, data, isError, refetch };
 };
 
 export default useGetMenu;

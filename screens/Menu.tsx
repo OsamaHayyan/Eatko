@@ -32,7 +32,7 @@ const Menu = ({ navigation, route }: Props) => {
   dataFavorite;
   const menu = useAppSelector(({ menu }) => menu);
   const dispatch = useAppDispatch();
-  const { isError, remove } = useGetMenu(categoryName, dataFavorite, dispatch);
+  const { isError, refetch } = useGetMenu(categoryName, dataFavorite, dispatch);
   const handleFavorite = async (meal: FavoriteType) => {
     let newMenu: FavoriteType[] = [];
     if (meal.favorite) {
@@ -47,9 +47,9 @@ const Menu = ({ navigation, route }: Props) => {
 
   useFocusEffect(
     useCallback(() => {
+      refetch();
       return () => {
         dispatch(resetMenu());
-        remove();
       };
     }, [navigation])
   );
