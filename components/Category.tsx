@@ -4,6 +4,7 @@ import { Pressable } from "react-native";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { CompositeScreenHomeType } from "../types/compositeScreenType";
+import ImageLoader from "./Ui/ImageLoader";
 
 type Props = {
   id: string;
@@ -74,7 +75,12 @@ const Category = ({ id, name, image }: Props) => {
           {name}
         </Text>
         <View style={styles.imageContainer}>
-          <Image source={image} contentFit="contain" style={styles.image} />
+          <ImageLoader
+            source={"asd"}
+            contentFit="contain"
+            style={styles.image}
+            backgroundColor="transparent"
+          />
         </View>
       </Pressable>
     </View>
