@@ -22,6 +22,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Provider } from "react-redux";
 import { persistor, store } from "./store/store";
 import { PersistGate } from "redux-persist/integration/react";
+import { Image } from "expo-image";
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -55,6 +56,9 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
+
+  Image.prefetch("./assets/images/loading.gif");
+  Image.prefetch("./assets/images/imageLoading.gif");
 
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>
